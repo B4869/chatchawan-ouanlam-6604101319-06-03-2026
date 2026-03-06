@@ -25,20 +25,20 @@ if (!fs.existsSync(logsDir)) {
   fs.mkdirSync(logsDir, { recursive: true });
 }
 
-// health check root
-app.get('/', (_req, res) => {
-  res.json({
-    message: 'API พร้อมใช้งาน (Supabase + Prisma + Quasar Frontend)',
-    timestamp: new Date().toISOString(),
-  });
-});
-
 app.get('/api/health', (req, res) => {
   const logMessage = `Request at ${new Date().toISOString()}: ${req.ip}\n`;
   fs.appendFileSync(path.join(logsDir, 'access.log'), logMessage);
 
   res.json({
     status: 'ok',
+    timestamp: new Date().toISOString(),
+  });
+});
+
+// health check root
+app.get('/', (_req, res) => {
+  res.json({
+    message: 'API พร้อมใช้งาน (Supabase + Prisma + Quasar Frontend)',
     timestamp: new Date().toISOString(),
   });
 });
