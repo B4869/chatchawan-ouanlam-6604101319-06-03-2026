@@ -1,0 +1,11 @@
+{
+    "student_id": "6604101319",
+    "name": "นายชัชวาลย์ อ้วนล่ำ",
+    "github_repo": "https://github.com/B4869/chatchawan-ouanlam-6604101319-06-03-2026.git",
+    "backend_base_url": "https://chatchawan-ouanlam-6604101319-06-03-2026.onrender.com/",
+    "frontend_url": "https://chatchawan-ouanlam-6604101319-06-03.vercel.app/#/",
+    "api": {
+        "health": "https://chatchawan-ouanlam-6604101319-06-03-2026.onrender.com/api/health",
+        "tasks": "https://chatchawan-ouanlam-6604101319-06-03-2026.onrender.com/api/tasks"
+    }
+}
